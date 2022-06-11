@@ -8,5 +8,14 @@
 
 ### To run prettier
 ```
-npm run prettier
+npm run Eslint
+```
+### To run Eslint
+```
+npm run eslint
+```
+
+### To fix Eslint
+```
+npm run eslint-fix
 ```

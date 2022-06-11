@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier --config .prettierrc src --write"
+    "prettier": "prettier --config .prettierrc src --write",
+    "eslint": "eslint . --ext .ts",
+    "eslint-fix": "eslint . --ext .ts --fix"
   },
   "keywords": [],
   "author": "",
