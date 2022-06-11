@@ -2,9 +2,9 @@
   "name": "abdelrahman",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon src/index.ts",
+    "start": "nodemon src/server.ts",
     "prettier": "prettier --config .prettierrc src --write",
     "eslint": "eslint . --ext .ts",
     "eslint-fix": "eslint . --ext .ts --fix"
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "sharp": "^0.30.6"
   },
@@ -23,6 +24,7 @@
     "@types/sharp": "^0.30.4",
     "@types/supertest": "^2.0.12",
     "eslint": "^8.17.0",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.16",
     "prettier": "^2.6.2",
     "ts-node": "^10.8.1",

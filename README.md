@@ -17,7 +17,7 @@ npm start
 ```
 ### OR
 ```
-node src/index
+node src/server
 ```
 ### To run prettier
 ```
