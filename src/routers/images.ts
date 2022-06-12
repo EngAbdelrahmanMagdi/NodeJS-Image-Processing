@@ -25,9 +25,11 @@ const handleApi = async (
       if (valid) {
         let thumbnail = await getThumbnailPath(request.query);
         if (thumbnail) {
+          console.log(thumbnail);
           response.sendFile(thumbnail);
         } else {
           let newThumbnail = await setImageUrl(request.query);
+          console.log(newThumbnail);
           if (newThumbnail) {
             response.sendFile(newThumbnail);
           } else {
