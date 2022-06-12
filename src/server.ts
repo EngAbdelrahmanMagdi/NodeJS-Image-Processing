@@ -20,7 +20,7 @@ server.get('/', (request: Request, response: Response): void => {
   response.send(
     `<h2> Welcome to Abdelrahman's Application  </h2>
         <p>Use route /api/images?imagename=(image name)</p>
-        <p>Example: http://localhost:${SERVER_PORT}/api/images?imagename=fjord&width=500&height=500</p>
+        <p>Example: http://localhost:${SERVER_PORT}/api/images?imageName=fjord&width=500&height=500</p>
 
         `
   );
