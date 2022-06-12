@@ -2,7 +2,6 @@ import path from 'path';
 import Image from './../types/image';
 import { getImageUrl } from './../index';
 
-
 export const thumbnailDirectory = path.resolve(
   __dirname,
   './../../../assets/images/thumbnails'
@@ -12,7 +11,9 @@ export const imageDirectory = path.resolve(
   './../../../assets/images/full'
 );
 
-export const getImage = async (imageName: Image): Promise<string | null> => {
+export const getImagePath = async (
+  imageName: Image
+): Promise<string | null> => {
   try {
     const image = path.resolve(imageDirectory, `${imageName}.jpg`);
     return await getImageUrl(image);
@@ -21,7 +22,7 @@ export const getImage = async (imageName: Image): Promise<string | null> => {
   }
 };
 
-export const getThumbnail = async (
+export const getThumbnailPath = async (
   thumbnailName: Image
 ): Promise<string | null> => {
   try {
@@ -34,3 +35,4 @@ export const getThumbnail = async (
     return null;
   }
 };
+

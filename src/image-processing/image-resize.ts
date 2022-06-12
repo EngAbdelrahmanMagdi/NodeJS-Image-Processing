@@ -7,7 +7,7 @@ class ImageResize {
   height: number;
   target: string;
 
-  constructor(src: string, target: string, width: number, height: number) {
+  constructor(src: string, width: number, height: number, target: string) {
     this.source = src;
     this.width = width;
     this.height = height;
@@ -19,11 +19,16 @@ class ImageResize {
     }
   };
 
-  resizeImage = async (): Promise<void> => {
-    await this.checkThumbDir();
-    await sharp(this.source)
-      .resize(this.width, this.height)
-      .toFile(this.target);
+  resizeImage = async (): Promise<boolean> => {
+    try {
+      await this.checkThumbDir();
+      await sharp(this.source)
+        .resize(this.width, this.height)
+        .toFile(this.target);
+      return true;
+    } catch {
+      return false;
+    }
   };
 }
 
