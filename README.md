@@ -19,15 +19,20 @@ npm start
 ```
 node src/server
 ```
-### To run prettier
+### To Run Jasmine Tests
 ```
-npm run Eslint
+npm run test
 ```
-
+### To Build Project
+```
+npm run build
+```
 ### To run prettier
 ```
 npm run prettier
 ```
+
+
 ### To run Eslint
 ```
 npm run eslint
