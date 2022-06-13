@@ -12,6 +12,11 @@
 
 ### http://localhost:8000/api/images?imageName=fjord
 
+
+#
+
+### http://localhost:8000/
+
 #
 
 ### if you repeated the same image with same dimensions it will not be duplicated
