@@ -4,6 +4,21 @@
 
 #
 
+## End Points 
+
+### http://localhost:8000/api/images?imageName=fjord&width=400&height=400
+
+### http://localhost:8000/api/images?imageName=fjord
+
+
+
+### if you repeated the same image with same dimensions it will not be duplicated
+
+#
+
+### If you changed the port number in .env make sure to put it 
+#
+
 ## Scripts You may need 
 
 ### To install my dependencies and developer dependencies 
@@ -29,16 +44,16 @@ npm run build
 ```
 ### To run prettier
 ```
-npm run prettier
+npm run prettify
 ```
 
 
 ### To run Eslint
 ```
-npm run eslint
+npm run lint
 ```
 
 ### To fix Eslint
 ```
-npm run eslint-fix
+npm run lint:fix
 ```

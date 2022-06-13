@@ -42,14 +42,14 @@ server.use(
     error: Error,
     request: Request,
     response: Response,
-    next: Function // eslint-disable-line 
+    next: Function // eslint-disable-line
   ): void => {
     response.status(500).json({ Errors: error.stack });
   }
 );
 
 server.listen(SERVER_PORT, (): void => {
-  console.log(`Server runs well! on port ${SERVER_PORT}`); // eslint-disable-line 
+  console.log(`Server runs well! on port ${SERVER_PORT}`); // eslint-disable-line
 });
 
 export default server;

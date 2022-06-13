@@ -8,9 +8,9 @@
     "build": "npx tsc",
     "jasmine": "jasmine",
     "test": "npx tsc && jasmine",
-    "prettier": "prettier --config .prettierrc src --write",
-    "eslint": "eslint . --ext .ts",
-    "eslint-fix": "eslint . --ext .ts --fix"
+    "prettify": "prettier --config .prettierrc src --write",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
   },
   "keywords": [],
   "author": "",

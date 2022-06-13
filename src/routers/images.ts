@@ -44,7 +44,7 @@ const handleApi = async (
       }
     }
   } else {
-    response.status(404).json({ Message: 'Image doesn\'t existed' });
+    response.status(404).json({ Message: 'Image does not existed' });
   }
 };
 
