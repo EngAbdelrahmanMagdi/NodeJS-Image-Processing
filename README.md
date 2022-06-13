@@ -8,9 +8,11 @@
 
 ### http://localhost:8000/api/images?imageName=fjord&width=400&height=400
 
+#
+
 ### http://localhost:8000/api/images?imageName=fjord
 
-
+#
 
 ### if you repeated the same image with same dimensions it will not be duplicated
 
