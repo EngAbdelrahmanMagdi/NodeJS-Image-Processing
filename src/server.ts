@@ -13,7 +13,6 @@ const SERVER_PORT = (process.env.SERVER_PORT as unknown as number) || 8000;
 //Morgan package for getting responses
 
 server.use(morgan('dev'));
-
 //Main URL
 
 server.get('/', (request: Request, response: Response): void => {
@@ -27,7 +26,7 @@ server.get('/', (request: Request, response: Response): void => {
 });
 //Routes
 
-server.use('/api/images',routes);
+server.use('/api/images', routes);
 
 //Server Listening
 
@@ -43,14 +42,14 @@ server.use(
     error: Error,
     request: Request,
     response: Response,
-    next: Function
+    next: Function // eslint-disable-line 
   ): void => {
     response.status(500).json({ Errors: error.stack });
   }
 );
 
 server.listen(SERVER_PORT, (): void => {
-  console.log(`Server runs well! on port ${SERVER_PORT}`);
+  console.log(`Server runs well! on port ${SERVER_PORT}`); // eslint-disable-line 
 });
 
 export default server;

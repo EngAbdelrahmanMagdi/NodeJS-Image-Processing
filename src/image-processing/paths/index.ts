@@ -35,4 +35,3 @@ export const getThumbnailPath = async (
     return null;
   }
 };
-
