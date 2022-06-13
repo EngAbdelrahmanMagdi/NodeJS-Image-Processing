@@ -28,9 +28,10 @@ export const getThumbnailPath = async (
   try {
     const thumbnail = path.resolve(
       thumbnailDirectory,
-      `imageName=${thumbnailName}&width=${thumbnailName.width}&height=${thumbnailName.height}`
+      `imageName=${thumbnailName.imageName}&width=${thumbnailName.width}&height=${thumbnailName.height}.jpg`
     );
-    return await getImageUrl(thumbnail);
+    const returnedResult = await getImageUrl(thumbnail);
+    return returnedResult;
   } catch {
     return null;
   }

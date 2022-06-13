@@ -2,6 +2,7 @@ import express, { Router, Request, Response } from 'express';
 import { getImagePath, getThumbnailPath } from './../image-processing/paths';
 import { setImageUrl } from './../image-processing/index';
 import Image from './../image-processing/types/image';
+import fs, { PathLike } from 'fs';
 
 const routes: Router = express.Router();
 
@@ -17,14 +18,15 @@ const handleApi = async (
   response: Response
 ): Promise<void> => {
   if (request.query.imageName) {
-    if (request.query.height || request.query.width) {
+    if (request.query.height && request.query.width) {
       let valid = validateImage(
         parseInt(request.query.width as string),
         parseInt(request.query.height as string)
       );
       if (valid) {
         let thumbnail = await getThumbnailPath(request.query);
-        if (thumbnail) {
+        const isExistedFile = fs.existsSync(thumbnail as PathLike);
+        if (isExistedFile && thumbnail) {
           response.sendFile(thumbnail);
         } else {
           let newThumbnail = await setImageUrl(request.query);
