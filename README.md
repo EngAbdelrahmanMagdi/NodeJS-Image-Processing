@@ -32,10 +32,7 @@ npm install
 ```
 npm start
 ```
-### OR
-```
-node src/server
-```
+
 ### To Run Jasmine Tests
 ```
 npm run test
